@@ -35,7 +35,7 @@ export default function BlogItemCarousel({post}: IProps) {
             mr: '20px' 
           }}
           image={`${process.env.REACT_APP_API_URL}/${post.img}`}
-          />
+        />
       }
       
       <div>

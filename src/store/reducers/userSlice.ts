@@ -70,8 +70,8 @@ export const userSlice = createSlice({
     }
   },
   extraReducers: {
-    [authMe.fulfilled.type]: (state, action: PayloadAction<AuthResponse>) => {
-      state.user = action.payload.user
+    [authMe.fulfilled.type]: (state, action: PayloadAction<IAuthUser>) => {
+      state.user = action.payload
     },
     [logout.fulfilled.type]: (state, action: PayloadAction) => {
       state.user = {_id: '', email: '', nickname: '', photo: ''}
