@@ -1,0 +1,90 @@
+.editor {
+  min-height: 500px;
+  max-height: 600px;
+  width: 0; 
+  min-width: 100%;
+  border: 1px solid #F1F1F1;
+  padding: 8px 30px;
+
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.87);
+
+  blockquote {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 36px;
+    margin-bottom: 20px;
+
+    .public-DraftStyleDefault-block {
+      line-height: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.825rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 12px;
+
+    .public-DraftStyleDefault-block {
+      line-height: 1.725rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+
+    .public-DraftStyleDefault-block {
+      line-height: 1.625rem;
+    }
+  }
+
+  figure {
+    margin: 0px 0;
+
+    img {
+      max-width: 100%;
+      min-width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color:#1976d2;
+  }
+
+  .rdw-image-alignment {
+    display: block;
+  }
+
+  .public-DraftStyleDefault-block {
+    margin: 0 0 8px;
+    line-height: 1.5rem;
+
+    br {
+      line-height: 2rem;
+    }
+  }
+
+  &__wrapper {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    margin: 0 -30px;
+    color: rgb(190, 190, 190);
+ 
+  }
+
+  &__toolbar {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}

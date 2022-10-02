@@ -1,0 +1,51 @@
+.post-content {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  word-break: break-word;
+  white-space: pre-wrap;
+  max-width: 775px;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    margin: 44px 0 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    margin: 36px 0 0;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    margin: 24px 0 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0;
+    margin: 0 0 12px;
+  }
+
+  blockquote {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
+    margin: 0 24px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

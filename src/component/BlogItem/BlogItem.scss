@@ -1,0 +1,10 @@
+.blog {
+  &__text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.4em;
+    height: 5.6em;
+  }
+}
