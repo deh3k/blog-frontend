@@ -21,7 +21,7 @@ export default function SmallPost(props: IProps) {
         <CardMedia
           component="img"
           sx={{ width: '80px', height: '60px', borderRadius: '4px' }}
-          src={`${process.env.REACT_APP_API_URL}${props.img}`}
+          src={`${process.env.REACT_APP_API_URL}/${props.img}`}
           alt="Live from space album cover"
         />
       }

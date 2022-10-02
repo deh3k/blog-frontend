@@ -36,7 +36,7 @@ export default function UserMenu() {
         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
           {user.photo
             ? 
-            <Avatar alt={user.nickname} src={`${process.env.REACT_APP_API_URL}${user.photo}`} />
+            <Avatar alt={user.nickname} src={`${process.env.REACT_APP_API_URL}/${user.photo}`} />
             :
             <Avatar sx={{backgroundColor: 'primary.light'}}/>
           }

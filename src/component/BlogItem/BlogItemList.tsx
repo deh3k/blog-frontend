@@ -56,7 +56,7 @@ export default function BlogItemList({ post, isAuthor = false }: IProps) {
       {post.img && <CardMedia
         component="img"
         sx={{ width: '100%', height: 'auto', mr: '20px', mb: '20px' }}
-        image={`${process.env.REACT_APP_API_URL}${post.img}`}
+        image={`${process.env.REACT_APP_API_URL}/${post.img}`}
         alt="Live from space album cover"
       />}
       <div>

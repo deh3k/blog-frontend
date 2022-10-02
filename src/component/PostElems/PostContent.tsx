@@ -52,7 +52,7 @@ export default function PostContent() {
             {post.title}
           </Typography>
           {post.img &&
-            <Box component={'img'} src={`${process.env.REACT_APP_API_URL}${post.img}`} sx={{
+            <Box component={'img'} src={`${process.env.REACT_APP_API_URL}/${post.img}`} sx={{
               height: 'auto',
               maxHeight: '460px',
               width: '100%',

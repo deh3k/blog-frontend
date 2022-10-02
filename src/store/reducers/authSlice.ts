@@ -3,6 +3,7 @@ import axios from "axios";
 import { instance } from "../../api/api";
 import { AuthResponse } from "../../model/IAuthResponse";
 import { IAxiosError } from "../../model/IAxiosError";
+import { IUser } from "../../model/IUser";
 import { isAxiosError } from "../../utils/IsAxiosError";
 
 
@@ -21,8 +22,15 @@ export const authMe = createAsyncThunk(
   'auth/authMe',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get<AuthResponse>(`${process.env.REACT_APP_API_URL}api/refresh`, {withCredentials: true})
-      localStorage.setItem('token', response.data.accessToken)  
+      let token = localStorage.getItem('token')
+      if(token === null) {
+        token = ''
+      }
+      const response = await axios.get<IUser>(`${process.env.REACT_APP_API_URL}/api/me`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
       return response.data
 
     } catch (error) {
@@ -39,7 +47,7 @@ export const login = createAsyncThunk(
   async (data: LoginData, thunkAPI) => {
     try {
       const response = await instance.post<AuthResponse>('/login', data)
-      localStorage.setItem('token', response.data.accessToken)
+      await localStorage.setItem('token', response.data.accessToken)
       thunkAPI.dispatch(authMe())
     } catch (error) {
       if (isAxiosError<IAxiosError>(error)) {
@@ -68,7 +76,7 @@ export const logout = createAsyncThunk(
   'auth/logout', 
   async (_, thunkAPI) => {
     try {
-      await instance.delete('/login')
+      // await instance.delete('/login')
       localStorage.removeItem('token')
     } catch (error) {
       if (isAxiosError<IAxiosError>(error)) {

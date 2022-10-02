@@ -86,7 +86,7 @@ export default function ChangeAvatar() {
         </Box>
         <Box sx={{ width: '74px', height: '74px' }}>
           {userPhoto ?
-            <Box component="img" src={`${process.env.REACT_APP_API_URL}${userPhoto}`} sx={{ width: '100%', height: '100%', borderRadius: '100%' }} />
+            <Box component="img" src={`${process.env.REACT_APP_API_URL}/${userPhoto}`} sx={{ width: '100%', height: '100%', borderRadius: '100%' }} />
             :
             <Avatar sx={{ width: '74px', height: '74px', backgroundColor: 'primary.light' }}/>
           }
@@ -115,7 +115,7 @@ export default function ChangeAvatar() {
               <>
                 {userPhoto
                   ?
-                  <Box component="img" src={`${process.env.REACT_APP_API_URL}${userPhoto}`} sx={{ width: '100%', height: '100%', borderRadius: '100%' }} />
+                  <Box component="img" src={`http://localhost:5000/${userPhoto}`} sx={{ width: '100%', height: '100%', borderRadius: '100%' }} />
                   :
                   <Avatar sx={{ borderRadius: '100%', width: '100%', height: '100%', bgcolor: 'primary.light' }} />
                 }
