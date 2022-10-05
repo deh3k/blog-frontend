@@ -54,7 +54,8 @@ export default function Home() {
             <Typography component="p" sx={{
               typography: { md: 'h6', sm: 'body1' },
               fontSize: { sm: '18px' },
-              color: 'rgba(255,255,255, 0.9)'
+              color: 'rgba(255,255,255, 0.9)',
+              mb: '20px'
             }}>
               Far far away, behind the word mountains,
               far from the countries Vokalia and Consonantia

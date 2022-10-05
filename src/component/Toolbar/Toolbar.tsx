@@ -1,9 +1,7 @@
 import { Autocomplete, Box, Button, Paper, TextField } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { createSearchParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { useAppDispatch } from '../../hooks/redux';
-import { fetchPosts } from '../../store/reducers/blogSlice';
+import { useSearchParams } from 'react-router-dom';
 
 interface IProps {
   children: React.ReactNode | React.ReactNode[]
@@ -14,7 +12,7 @@ interface IFormInputs {
   category: string | null
 }
 
-const categoriesOption = ['Travel', 'Science', 'Technology', 'My story', 'Nature', 'Animals', 'Sci-Fi', 'Sci-Pop', 'Health', 'Design',]
+const categoriesOption = ['Travel', 'Science', 'Technology', 'My story', 'Nature', 'Animals', 'Sci-Fi', 'Sci-Pop', 'Health', 'Design', 'IT']
 
 
 export default function Toolbar({ children }: IProps) {

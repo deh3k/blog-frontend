@@ -8,7 +8,7 @@ import CommentsWrap from '../../component/Comments/CommentsWrap';
 export default function Post() {
 
   return (
-    <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'stretch' }}>
+    <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'stretch', p: 0 }}>
       <Box sx={{flexGrow: 1}}>
         <PostContent />
         <CommentsWrap />

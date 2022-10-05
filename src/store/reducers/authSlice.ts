@@ -26,7 +26,7 @@ export const authMe = createAsyncThunk(
       if(token === null) {
         token = ''
       }
-      const response = await axios.get<IUser>(`${process.env.REACT_APP_API_URL}/api/me`, {
+      const response = await axios.get<IUser>(`${process.env.REACT_APP_API_URL}/api/auth/me`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async (data: LoginData, thunkAPI) => {
     try {
-      const response = await instance.post<AuthResponse>('/login', data)
+      const response = await instance.post<AuthResponse>('/auth/login', data)
       await localStorage.setItem('token', response.data.accessToken)
       thunkAPI.dispatch(authMe())
     } catch (error) {
@@ -61,7 +61,7 @@ export const userRegister = createAsyncThunk(
   'auth/register',
   async (data: RegisterData, thunkAPI) => {
     try {
-      const response = await instance.post<AuthResponse>('/register', data)
+      const response = await instance.post<AuthResponse>('/auth/register', data)
       localStorage.setItem('token', response.data.accessToken)
       thunkAPI.dispatch(authMe())
     } catch (error) {
